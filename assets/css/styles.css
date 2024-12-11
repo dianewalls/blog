@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    /* Offset for the fixed header */
+}
+
+.response {
+    font-size: 1.2rem;
+    color: #333;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 80%;
+    line-height: 1.6;
+    position: relative;
+}
+
+.response::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.response span {
+    display: inline-block;
+    opacity: 0;
+    animation: typing 0.05s linear forwards;
+}
+
+
+@keyframes typing {
+    to {
+        opacity: 1;
+    }
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .social-icons {
+    list-style: none;
+    padding: 0;
+}
+
+footer .social-icons li {
+    display: inline;
+    margin: 0 15px;
+}
+
+footer .social-icons li a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+footer .social-icons li a:hover {
+    color: #0073b1;
+    /* LinkedIn blue */
+}
